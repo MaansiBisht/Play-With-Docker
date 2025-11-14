@@ -38,6 +38,14 @@ The `vpn/` directory contains a containerised OpenVPN client paired with tinypro
   - Rename the profile you want to use to `client.ovpn`.
   - Optionally create `auth.txt` with username on line 1 and password on line 2 when the profile references `auth-user-pass`.
 
+### Image and package rationale
+
+- **Base image – `alpine:3.18`:** lightweight, security-focused distribution with musl libc, keeping the final image small while giving access to OpenVPN packages maintained by Alpine.
+- **Core services:**
+  - `openvpn` provides the VPN client.
+  - `tinyproxy` exposes an HTTP/HTTPS proxy that rides the tunnel.
+- **Networking & diagnostics:** `iproute2`, `net-tools`, `iputils`, and `tcpdump` aid in routing inspection and packet captures when debugging connectivity.
+
 ### Prepare configuration files
 
 Place provider assets inside the VPN playground’s config mount:
