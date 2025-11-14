@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  vpn-proxy:
+    build: .
+    container_name: vpn-proxy
+    network_mode: "host"
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    volumes:
+      - ./config:/vpn/config
+    restart: unless-stopped

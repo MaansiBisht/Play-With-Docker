@@ -1,0 +1,19 @@
+# Repository-level ignores
+.DS_Store
+.env
+
+# Proton VPN secrets (keep real credentials out of version control)
+vpn/config/*.ovpn
+vpn/config/*.key
+vpn/config/*.crt
+vpn/config/*.pem
+vpn/config/*.conf
+vpn/config/auth.txt
+
+# Proton VPN mount directory
+vpn/vpn/*
+!vpn/vpn/.gitkeep
+
+# Runtime artifacts
+vpn/logs/*
+!vpn/logs/.gitkeep
