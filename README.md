@@ -6,7 +6,8 @@ A collection of Docker-based playgrounds for experimenting with different stacks
 
 ```
 .
-├── vpn/        # OpenVPN + tinyproxy playground (described below)
+├── vpn/                    # OpenVPN + tinyproxy playground (described below)
+├── mov-to-gif-converter/    # MOV to GIF converter with Docker (described below)
 └── README.md
 ```
 
@@ -15,6 +16,7 @@ A collection of Docker-based playgrounds for experimenting with different stacks
 | Directory | Description |
 |-----------|-------------|
 | `vpn/`    | Runs an OpenVPN client and exposes tinyproxy so local applications can send traffic through the VPN tunnel. |
+| `mov-to-gif-converter/` | Web-based tool that converts macOS screen recordings (.mov) to optimized GIFs using FFmpeg. Features drag-and-drop upload, real-time progress tracking, batch processing, and Docker-controlled development/production environments. |
 
 
 ## Workflow
