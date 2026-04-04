@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+*.md
+.env
+.env.*
+frontend/node_modules
+backend/node_modules
+frontend/dist
+uploads/*
+output/*
+temp/*
+!uploads/.gitkeep
+!output/.gitkeep
+!temp/.gitkeep
